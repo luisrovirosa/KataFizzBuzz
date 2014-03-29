@@ -8,6 +8,7 @@ FizzBuzz.prototype.getNumbers = function() {
     numbers.push(i);
   }
   numbers[2] = 'Fizz';
+  numbers[4] = 'Buzz';
   return numbers;
 };
 
