@@ -7,6 +7,7 @@ FizzBuzz.prototype.getNumbers = function() {
   for (var i = 1; i < 100; i++) {
     numbers.push(i);
   }
+  numbers[2] = 'Fizz';
   return numbers;
 };
 

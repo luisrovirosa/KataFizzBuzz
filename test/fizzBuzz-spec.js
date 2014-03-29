@@ -24,5 +24,8 @@ describe('FizzBuzz', function() {
     });
     expect(validNumbers.length).toBe(99);
   });
+  it("the third element is Fizz", function() {
+    expect(numbers[2]).toBe("Fizz");
+  });
 
 });
