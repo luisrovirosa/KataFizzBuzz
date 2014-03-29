@@ -5,18 +5,23 @@ function FizzBuzz() {
 FizzBuzz.prototype.getNumbers = function() {
   var numbers = [];
   for (var i = 1; i < 100; i++) {
-    if (isFizzBuzz(i)) {
-      numbers.push('FizzBuzz');
-    } else if (isFizz(i)) {
-      numbers.push('Fizz');
-    } else if (isBuzz(i)) {
-      numbers.push('Buzz');
-    } else {
-      numbers.push(i);
-    }
+    numbers.push(calculate(i));
   }
 
   return numbers;
+};
+
+var calculate = function(number) {
+  var response = number;
+  if (isFizzBuzz(number)) {
+    response = 'FizzBuzz';
+  } else if (isFizz(number)) {
+    response = 'Fizz';
+  } else if (isBuzz(number)) {
+    response = 'Buzz';
+  }
+
+  return response;
 };
 
 var isFizzBuzz = function(number) {
