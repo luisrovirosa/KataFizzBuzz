@@ -28,7 +28,7 @@ var isFizz = function(number) {
 };
 
 var isBuzz = function(number) {
-  return isMultiple(number, 5);
+  return isMultiple(number, 5) || contains(number, '5');
 };
 
 var isMultiple = function(number, multiple) {
