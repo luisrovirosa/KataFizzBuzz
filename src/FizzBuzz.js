@@ -24,12 +24,21 @@ var isFizzBuzz = function(number) {
 };
 
 var isFizz = function(number) {
-  var stringNumber = new String(number);
-  return number % 3 === 0 || -1 !== stringNumber.indexOf('3');
+  return isMultiple(number, 3) || contains(number, '3');
 };
 
 var isBuzz = function(number) {
-  return number % 5 === 0;
+  return isMultiple(number, 5);
 };
+
+var isMultiple = function(number, multiple) {
+  return 0 === number % multiple;
+};
+
+var contains = function(number, stringToCheck) {
+  var stringNumber = new String(number);
+  return -1 !== stringNumber.indexOf(stringToCheck);
+};
+
 
 module.exports.FizzBuzz = FizzBuzz;
