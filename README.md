@@ -13,11 +13,29 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 A number is fizz if it is divisible by 3 or if it has a 3 in it.
 
 A number is buzz if it is divisible by 5 or if it has a 5 in it
-Estrategia de resolución
-===
-
 
 Cómo ejecutar el código
 ===
+Prerequisito: Tener [NodeJS](http://nodejs.org) instalado 
+
+	git clone https://github.com/luisrovirosa/KataFizzBuzz.git
+	cd KataFizzBuzz
 	npm install
-	./node_modules/jasmine-node/bin/jasmine-node test
+	./node_modules/jasmine-node/bin/jasmine-node test/ --verbose
+Estrategia de resolución
+===
+Siguiendo BDD/TDD haciendo lo mínimo posible en cada paso. Pasos
+
+
+1. Comprobar que devuelve un array de 99 elementos
+2. Probar que para los casos básicos (cuando no son múltiplos de 3 ni de 5) devuelve el número
+3. Probar que cuando es múltiplo de 3 devuelve Fizz
+4. Probar que cuando es múltiplo de 5 devuelve Buzz
+5. Probar que cuando es múltiplo de 3 y 5 simultáneamente devuelve FizzBuzz
+6. Modificar las condiciones para cuando es Fizz
+7. Modificar las condiciones para cuando es Buzz
+8. Refáctoring para acortar los métodos y organizar la lógica de las reglas
+
+Decisiones de resolución
+===
+He considerado que el segundo requisito afecta también a la lógica de FizzBuzz. Si no fuera así, sería tan fácil de cambiar como modificar la función FizzBuzz.isFizzBuzz.
