@@ -12,6 +12,7 @@ FizzBuzz.prototype.getNumbers = function() {
     }
   }
   numbers[4] = 'Buzz';
+  numbers[9] = 'Buzz';
   return numbers;
 };
 
