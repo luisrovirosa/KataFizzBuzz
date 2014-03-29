@@ -18,4 +18,11 @@ describe('FizzBuzz', function() {
   it("the second element is 2", function() {
     expect(numbers[1]).toBe(2);
   });
+  it("all the values are Fizz, Buzz, FizzBuzz or a number", function() {
+    var validNumbers = numbers.filter(function(n) {
+      return "Fizz" === n || "Buzz" === n || "FizzBuzz" === n || !isNaN(n);
+    });
+    expect(validNumbers.length).toBe(99);
+  });
+
 });
