@@ -30,5 +30,8 @@ describe('FizzBuzz', function() {
   it("the fifth element is Buzz", function() {
     expect(numbers[4]).toBe("Buzz");
   });
+  it("the sixth element is Fizz", function() {
+    expect(numbers[5]).toBe("Fizz");
+  });
 
 });
