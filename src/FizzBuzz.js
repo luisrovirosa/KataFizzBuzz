@@ -5,11 +5,11 @@ function FizzBuzz() {
 FizzBuzz.prototype.getNumbers = function() {
   var numbers = [];
   for (var i = 1; i < 100; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
+    if (isFizzBuzz(i)) {
       numbers.push('FizzBuzz');
-    } else if (i % 3 === 0) {
+    } else if (isFizz(i)) {
       numbers.push('Fizz');
-    } else if (i % 5 === 0) {
+    } else if (isBuzz(i)) {
       numbers.push('Buzz');
     } else {
       numbers.push(i);
@@ -18,6 +18,18 @@ FizzBuzz.prototype.getNumbers = function() {
   numbers[14] = 'FizzBuzz';
   numbers[29] = 'FizzBuzz';
   return numbers;
+};
+
+var isFizzBuzz = function(number) {
+  return number % 3 === 0 && number % 5 === 0;
+};
+
+var isFizz = function(number) {
+  return number % 3 === 0;
+};
+
+var isBuzz = function(number) {
+  return number % 5 === 0;
 };
 
 module.exports.FizzBuzz = FizzBuzz;
