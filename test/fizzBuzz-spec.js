@@ -42,5 +42,8 @@ describe('FizzBuzz', function() {
   it("the 30th element is FizzBuzz", function() {
     expect(numbers[29]).toBe('FizzBuzz');
   });
+  it("the 13 element is Fizz because contains a 3", function() {
+    expect(numbers[12]).toBe('Fizz');
+  });
 
 });

@@ -24,7 +24,8 @@ var isFizzBuzz = function(number) {
 };
 
 var isFizz = function(number) {
-  return number % 3 === 0;
+  var stringNumber = new String(number);
+  return number % 3 === 0 || -1 !== stringNumber.indexOf('3');
 };
 
 var isBuzz = function(number) {
