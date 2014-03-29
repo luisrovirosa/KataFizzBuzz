@@ -15,4 +15,7 @@ describe('FizzBuzz', function() {
   it("the first element is 1", function() {
     expect(numbers[0]).toBe(1);
   });
+  it("the second element is 2", function() {
+    expect(numbers[1]).toBe(2);
+  });
 });
