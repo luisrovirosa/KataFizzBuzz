@@ -50,5 +50,5 @@ describe('FizzBuzz', function() {
   });
   it("the 53 is FizzBuzz because contains a 3 and 5", function() {
     expect(numbers[52]).toBe('FizzBuzz');
-  })
+  });
 });

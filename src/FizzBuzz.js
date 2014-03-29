@@ -1,17 +1,10 @@
+var Rule = require('./Rule.js').Rule;
+
 function FizzBuzz() {
   this.rules = [
-    {
-      method: isFizzBuzz,
-      value: 'FizzBuzz'
-    },
-    {
-      method: isFizz,
-      value: 'Fizz'
-    },
-    {
-      method: isBuzz,
-      value: 'Buzz'
-    }
+    new Rule(isFizzBuzz, 'FizzBuzz'),
+    new Rule(isFizz, 'Fizz'),
+    new Rule(isBuzz, 'Buzz')
   ];
 }
 
@@ -27,9 +20,8 @@ FizzBuzz.prototype.getNumbers = function() {
 FizzBuzz.prototype.calculate = function(number) {
   for (var i = 0; i < this.rules.length; i++) {
     var rule = this.rules[i];
-    var method = rule['method'];
-    if (method(number)) {
-      return rule['value'];
+    if (rule.check(number)) {
+      return rule.getValue();
     }
   }
   return number;
