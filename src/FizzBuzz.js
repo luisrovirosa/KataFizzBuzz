@@ -21,7 +21,7 @@ FizzBuzz.prototype.getNumbers = function() {
 };
 
 var isFizzBuzz = function(number) {
-  return number % 3 === 0 && number % 5 === 0;
+  return isFizz(number) && isBuzz(number);
 };
 
 var isFizz = function(number) {
