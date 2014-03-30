@@ -18,6 +18,8 @@ Cómo ejecutar el código
 ===
 Prerequisito: Tener [NodeJS](http://nodejs.org) instalado 
 
+**Descargar código y librerías**
+
 	git clone https://github.com/luisrovirosa/KataFizzBuzz.git
 	cd KataFizzBuzz
 	npm install
