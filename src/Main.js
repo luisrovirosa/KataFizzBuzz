@@ -4,23 +4,27 @@ function Main() {
   var fizzBuzz = new FizzBuzz();
   this.numbers = fizzBuzz.getNumbers();
 }
-;
+
 
 Main.prototype.setColumns = function(columns) {
-  this.columns = columns || this.columns
-  this.iterations = this.numbers.length / this.columns;
+  this.columns = columns || 1;
+  this.iterations = Math.ceil(this.numbers.length / this.columns);
+};
 
-}
-
-var getNumberToPrint = function(value) {
-  var response = '        ' + value + "\t";
-  return response.slice(-9);
+Main.prototype.getNumberToPrint = function(position) {
+  if (this.numbers.length <= position) {
+    return '';
+  }
+  var number = '      ' + (position + 1) + ': ';
+  var response = '        ' + this.numbers[position] + "\t\t";
+  return number.slice(-4) + response.slice(-10);
 };
 
 Main.prototype.getLineToPrint = function(iteration) {
   var line = '';
   for (var j = 0; j < this.columns; j++) {
-    line += getNumberToPrint(this.numbers[iteration + j * this.iterations]);
+    var element = iteration + j * this.iterations;
+    line += this.getNumberToPrint(element);
   }
   return line;
 };
@@ -34,4 +38,4 @@ Main.prototype.run = function(columns) {
 
 
 var main = new Main();
-main.run(3);
+main.run(5);
