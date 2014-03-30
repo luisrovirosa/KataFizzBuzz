@@ -45,3 +45,6 @@ Siguiendo BDD/TDD haciendo lo mínimo posible en cada paso. Pasos
 Decisiones de resolución
 ===
 He considerado que el segundo requisito afecta también a la lógica de FizzBuzz. Si no fuera así, sería tan fácil de cambiar como modificar la función FizzBuzz.isFizzBuzz.
+Qué cambiaría ahora
+===
+Habría hecho primero una forma de tener la respuesta en pantalla en vez de hacerlo lo último. De esa forma desde los primeros momentos hubiera tenido una forma de ver (y de poder enseñar si fuera un proyecto real) la progresión. 
