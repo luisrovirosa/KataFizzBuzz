@@ -21,6 +21,12 @@ Prerequisito: Tener [NodeJS](http://nodejs.org) instalado
 	git clone https://github.com/luisrovirosa/KataFizzBuzz.git
 	cd KataFizzBuzz
 	npm install
+	
+**Obtener la salida**
+
+	node src/Main.js
+**Ejecutar los tests**
+	
 	./node_modules/jasmine-node/bin/jasmine-node test/ --verbose
 Estrategia de resolución
 ===
